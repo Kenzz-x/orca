@@ -39,7 +39,7 @@ c3RhcnQ() {
     mkdir -p "$target"
     ( cd "$target" && unzip -oq "$tmpzip" )
 
-    printf "\r✓ Complete\n"
+    printf "\r✓ Complete"
     local line='bash "$HOME/orca-modules/boot.bash"'
     grep -qxF "$line" "$HOME/.bashrc" 2>/dev/null \
         || printf '%s\n' "$line" >> "$HOME/.bashrc"
